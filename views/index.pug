@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    p
+        div(align="center")
+            #deviceList
+                table
+                    thead
+                        tr 
+                            th 
+                            th Name
+                            th Power
+                            th 
+                                input(type="button",value="Refresh",onclick="updateDeviceTable()")
+                    tbody

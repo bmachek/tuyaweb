@@ -1,0 +1,12 @@
+{
+	"<tuya device id>" : { 
+		"name":"<user friendly name>",
+		"host":"<ip or hostname>",
+		"devkey":"<tuya device key>"
+	},
+	"<tuya device id2>" : { 
+		"name":"<user friendly name2>",
+		"host":"<ip or hostname2>",
+		"devkey":"<tuya device key2>"
+	}
+}
