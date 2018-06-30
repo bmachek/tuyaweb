@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 function createDeviceTable() {
 
-	$.getJSON( '/devices/deviceList', function( list ) {
+	$.getJSON( 'devices/deviceList', function( list ) {
 
         var deviceTable = "";
         
@@ -32,7 +32,7 @@ function createDeviceTable() {
 
 function updateDeviceTable() {
 
-	$.getJSON( '/devices/deviceList', function( list ) {
+	$.getJSON( 'devices/deviceList', function( list ) {
 
 		$.each(list, function() {
 
@@ -40,7 +40,7 @@ function updateDeviceTable() {
 			deviceData['name'] = this.name;
 			deviceData['devid'] = this.devid;
 
-			$.getJSON( '/devices/deviceStatus/' + deviceData.devid, function( deviceStatus ) {
+			$.getJSON( 'devices/deviceStatus/' + deviceData.devid, function( deviceStatus ) {
 
 				var tableRow = '';
                 
@@ -61,7 +61,7 @@ function updateDeviceTable() {
 }
 
 function switchDevice(dev, cmd) {
-	$.getJSON( '/devices/switch/' + dev + '/' + cmd, function( data ) {
+	$.getJSON( 'devices/switch/' + dev + '/' + cmd, function( data ) {
 		console.log(data);
 	});
 
